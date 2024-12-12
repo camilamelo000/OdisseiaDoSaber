@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Livro",
+        "seq": 40
+    },
+    {
+        "name": "Comentario",
+        "seq": 15
+    },
+    {
+        "name": "Usuario",
+        "seq": 4
+    }
+]
