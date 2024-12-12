@@ -1,0 +1,191 @@
+/* Navbar principal */
+.nav-main {
+  position: relative;
+  background-color: #9b59b6; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+.nav-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 1rem 2rem;
+  min-height: 5rem;
+}
+
+.links,
+.account,
+.logo {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.desktop-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.links a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.links a:hover {
+  color: #e5a900;
+  transform: translateY(-3px);
+}
+
+.account {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.account-details {
+  position: relative;
+  font-size: 1.4rem;
+}
+
+.contains-link-to-accounts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.items-in-cart {
+  position: absolute;
+  content: "";
+  top: -5px;
+  right: -5px;
+  background-color: #f39c12;
+  color: white;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Barra de busca */
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff; 
+  border-radius: 25px;  /* Estilo mais arredondado */
+  padding: 5px 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.search:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Efeito sutil ao passar o mouse */
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  color: rgb(46, 39, 39);
+  padding: 8px;
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.search button:hover {
+  color: #e5a900;
+}
+
+.home-link {
+  color: white; 
+  text-decoration: none; 
+  font-size: 1.2rem; 
+  padding: 10px 20px; 
+  border-radius: 25px; 
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.home-link:hover {
+  background-color: #8e44ad; 
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .desktop-links {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+    background: transparent;
+    border: none;
+  }
+
+  .search {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .home-link {
+    font-size: 1rem;
+  }
+
+  .account {
+    gap: 1rem;
+  }
+
+  .account-details {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,35 @@
+.product-details-container {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+  }
+  
+  .product-image img {
+    width: 300px;
+    height: auto;
+  }
+  
+  .product-info {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .product-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .product-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .feedback {
+    margin-top: 20px;
+  }
+  
+  .feedback p {
+    font-size: 1.5rem;
+    color: gold;
+  }
+  
