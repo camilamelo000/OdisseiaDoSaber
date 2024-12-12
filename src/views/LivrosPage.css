@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  justify-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 100%;
+  min-height: 380px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imgBox {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.product-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.contentBox {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  flex-grow: 1;
+  min-height: 150px; 
+}
+
+.contentBox h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.contentBox .price {
+  font-size: 20px;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.contentBox .buy {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #9b59b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contentBox .buy:hover {
+  background-color: #c265e9;
+}
+
+
+.mini-navbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mini-navbar button {
+  background-color: #ffce00;
+  border: none;
+  padding: 12px 24px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+}
+
+.mini-navbar button:hover {
+  background-color: #e5a900;
+}
+
+.livros-page {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .contentBox h3 {
+    font-size: 16px;
+  }
+
+  .contentBox .price {
+    font-size: 18px;
+  }
+
+  .contentBox .buy {
+    padding: 10px 20px;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup-product-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.close-popup {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup:hover {
+  background-color: #c265e9;
+}
+
+.popup-overlay-cart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content-cart {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.popup-title-cart {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup-product-image-cart {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.popup-frete {
+  margin: 15px 0;
+}
+
+.popup-quantidade {
+  margin: 15px 0;
+}
+
+.popup-buy {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-buy:hover {
+  background-color: #c265e9;
+}
+
+.close-popup-cart {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-popup-cart:hover {
+  background-color: #c0392b;
+}
